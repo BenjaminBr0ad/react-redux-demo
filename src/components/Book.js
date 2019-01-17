@@ -7,6 +7,7 @@ class Book extends Component {
   render() {
     const {
       book,
+      addToCart,
       book: {
         title,
         author,
@@ -17,7 +18,7 @@ class Book extends Component {
       <tr>
         <th scope="row">{title}</th>
         <td>{author}</td>
-        <td>{price}</td>
+        <td>${price}.00</td>
         <td><button onClick={(e) => addToCart(book)} type="button" className="btn btn-info">Add</button></td>
       </tr>
     )

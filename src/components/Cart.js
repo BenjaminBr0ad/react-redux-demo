@@ -5,17 +5,20 @@ import CartItem from './CartItem'
 class Cart extends Component {
 
   render() {
+    const {
+      cart
+    } = this.props
     return (
       <table className="table">
         <thead>
           <tr>
             <th scope="col">Item</th>
-            <th scope="col">Quantity</th>
             <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
           </tr>
         </thead>
         <tbody>
-          {this.props.cart ? this.props.cart.map(cartItem => {
+          {cart ? Object.keys(cart).map(cartItem => {
             return (
               <CartItem
                 key={cartItem.id}

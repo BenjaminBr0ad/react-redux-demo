@@ -3,17 +3,19 @@ import {
 } from '../actions/cart.js'
 
 const initialState = {
-  cart: []
+  cart: {}
 }
 
 export default (state = initialState, action) => {
   switch (action.type) {
 
     case ADD_TO_CART:
-    console.log('reducer:',action.payload);
+      let cart = state.cart
+      console.log(cart);
+      
       return {
         ...state,
-        cart: [...state.cart, action.payload]
+        cart: cart
       }
 
     default:
