@@ -11,8 +11,8 @@ class CartItem extends Component {
     return (
       <tr>
         <th scope="row">{item.title}</th>
-        <td>${item.price}.00</td>
         <td>{item.quantity}</td>
+        <td>${item.price * item.quantity}.00</td>
       </tr>
     )
   }

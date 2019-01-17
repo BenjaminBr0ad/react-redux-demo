@@ -13,12 +13,12 @@ class Cart extends Component {
         <thead>
           <tr>
             <th scope="col">Item</th>
-            <th scope="col">Price</th>
             <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
           </tr>
         </thead>
         <tbody>
-          {cart ? Object.keys(cart).map(cartItem => {
+          {cart ? this.props.cart.map(cartItem => {
             return (
               <CartItem
                 key={cartItem.id}
